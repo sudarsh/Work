@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://7atlis.bigbinary.com/" />
+<title>4th Case</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">4th Case</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_email</td>
+	<td>sam@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_password</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=American Indian Health &amp; Services</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=American Indian Health &amp; Services</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='DataTables_Table_5']/tbody/tr[last()]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='DataTables_Table_5']/tbody/tr[last()]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td</td>
+	<td>My_Test</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[2]/td</td>
+	<td>Testing123</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[3]/td</td>
+	<td>Sudarsh Ms</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[12]/td</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[5]/td</td>
+	<td>Completed</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[4]/tbody/tr/td</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[5]/th</td>
+	<td>Final Approver Name</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[2]/td</td>
+	<td>javascript{today = new Date();(&quot;0&quot; + (today.getMonth() + 1)).slice(-2)+&quot;/&quot;+today.getDate()+&quot;/&quot;+today.getFullYear()}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Sam Smith</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/div/div</td>
+	<td>×Signed out successfully.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

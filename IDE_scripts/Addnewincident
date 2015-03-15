@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://7atlis.bigbinary.com/" />
+<title>working</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">working</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_email</td>
+	<td>sam@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_password</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=American Indian Health &amp; Services</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=American Indian Health &amp; Services</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='DataTables_Table_5']/thead/tr/th/div[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=incident_title</td>
+	<td>My_Test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=incident_persons_involved_ids</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=incident_description</td>
+	<td>Testing123</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@id='employee_id'])[13]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='employee_id'])[13]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>incident_persons_involved_ids</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=feildset &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=incident_reported_anonymously_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div/div/div</td>
+	<td>×Incident was reported successfully.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td</td>
+	<td>My_Test</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[2]/td</td>
+	<td>Testing123</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[3]/td</td>
+	<td>Sudarsh Ms</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[5]/td</td>
+	<td>Ready For Assignment</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[12]/td</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, '/my/tasks')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=My_Test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=incident_incident_investigators_attributes_0_user_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.modal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value=&quot;John Smith&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@data-behavior='employee-list-selector']/feildset/input[@name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=incident_investigation_due_date</td>
+	<td>12-10-2015</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=incident_final_approver_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.modal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value=&quot;Charlie Smith&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@data-behavior='employee-list-selector']/feildset/input[@name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div/div/div</td>
+	<td>×Incident was successfully assigned.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[5]/td</td>
+	<td>Investigation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr/td</td>
+	<td>John Smith</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[3]</td>
+	<td>Investigation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[5]/td</td>
+	<td>Charlie Smith</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Sam Smith</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
