@@ -15,6 +15,10 @@ public class CreateEmployee {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
+        public static void main () {
+            System.out.println("ivide");
+        }
+
     @Before
     public void setUp() throws Exception {
         driver = new FirefoxDriver();
@@ -32,9 +36,12 @@ public class CreateEmployee {
         driver.findElement(By.id("user_password")).sendKeys("password");
         driver.findElement(By.name("commit")).click();
         assertEquals("×\nSigned in successfully.", driver.findElement(By.xpath("//div[2]/div/div/div")).getText());
-        for (int second = 0;; second++) {
+        for (int second = 0; ; second++) {
             if (second >= 60) fail("timeout");
-            try { if (isElementPresent(By.linkText("American Indian Health & Services"))) break; } catch (Exception e) {}
+            try {
+                if (isElementPresent(By.linkText("American Indian Health & Services"))) break;
+            } catch (Exception e) {
+            }
             Thread.sleep(1000);
         }
 
@@ -50,8 +57,8 @@ public class CreateEmployee {
 
         driver.findElement(By.id("employee_email")).sendKeys("emp_" + empNum + "@gmail.com");
         driver.findElement(By.id("employee_first_name")).clear();
-        driver.findElement(By.id("employee_first_name")).sendKeys("emp_" + empNum );
-                driver.findElement(By.id("employee_last_name")).clear();
+        driver.findElement(By.id("employee_first_name")).sendKeys("emp_" + empNum);
+        driver.findElement(By.id("employee_last_name")).clear();
         driver.findElement(By.id("employee_last_name")).sendKeys("last_name");
         driver.findElement(By.name("commit")).click();
         assertEquals("Employer Related Information", driver.findElement(By.xpath("//form[@id='new_employee']/feildset/div[2]/h3")).getText());
@@ -63,14 +70,17 @@ public class CreateEmployee {
         assertEquals("Provider Details", driver.findElement(By.xpath("//form[@id='new_employee']/feildset/div[4]/div/h3")).getText());
         driver.findElement(By.name("commit")).click();
         driver.findElement(By.name("commit")).click();
-        for (int second = 0;; second++) {
+        for (int second = 0; ; second++) {
             if (second >= 60) fail("timeout");
-            try { if (isElementPresent(By.linkText("emp_" + empNum ))) break; } catch (Exception e) {}
+            try {
+                if (isElementPresent(By.linkText("emp_" + empNum))) break;
+            } catch (Exception e) {
+            }
             Thread.sleep(1000);
         }
 
         assertEquals("×\nEmployee emp_" + empNum + " was created", driver.findElement(By.xpath("//div[2]/div/div/div")).getText());
-                driver.findElement(By.linkText("Sam Smith")).click();
+        driver.findElement(By.linkText("Sam Smith")).click();
         driver.findElement(By.linkText("Logout")).click();
         assertEquals("×\nSigned out successfully.", driver.findElement(By.xpath("//div[2]/div/div/div")).getText());
     }
@@ -90,30 +100,6 @@ public class CreateEmployee {
             return true;
         } catch (NoSuchElementException e) {
             return false;
-        }
-    }
-
-    private boolean isAlertPresent() {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    private String closeAlertAndGetItsText() {
-        try {
-            Alert alert = driver.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
         }
     }
 }
